@@ -51,5 +51,3 @@ assert_eq!(stack.top(), Some(4));
 assert_eq!(stack.pop(), Some(4));
 assert_eq!(stack.get_min(), Some(1));
 ```
-
-This task is a bit more challenging and requires a solid understanding of the data structure and handling of potential edge cases. Good luck!
