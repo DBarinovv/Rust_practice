@@ -39,6 +39,7 @@ impl<T: Ord + Clone> MinStack<T> {
     }
 }
 
+
 #[cfg(test)]
 mod tests {
     use super::*;
