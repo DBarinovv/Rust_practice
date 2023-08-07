@@ -3,15 +3,15 @@
 
 Write a function in Rust that takes two matrices and returns their product. You can assume that the matrices will be of the correct size for multiplication, that is, the number of columns of the first matrix is equal to the number of rows of the second matrix.
 
-#### Prototype:
+#### Structure Prototype:
 
 ```rust
 fn multiply_matrices(mat1: Vec<Vec<f64>>, mat2: Vec<Vec<f64>>) -> Vec<Vec<f64>> {
-    // your code is here
+    // Your code here
 }
 ```
 
-#### Input data examples:
+#### Usage Example:
 
 ```rust
 let mat1 = vec![
