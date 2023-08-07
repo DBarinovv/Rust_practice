@@ -52,7 +52,6 @@ impl CarBuilder {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -74,24 +73,21 @@ mod tests {
 
     #[test]
     fn test_partial_specification() {
-        let car = CarBuilder::new()
-            .brand("Ford")
-            .build();
+        let car = CarBuilder::new().brand("Ford").build();
 
         assert_eq!(car.brand, "Ford");
         assert_eq!(car.model, "");
         assert_eq!(car.color, "");
-        assert_eq!(car.doors, 0); 
+        assert_eq!(car.doors, 0);
     }
 
     #[test]
     fn test_default_specification() {
-        let car = CarBuilder::new()
-            .build();
+        let car = CarBuilder::new().build();
 
         assert_eq!(car.brand, "");
         assert_eq!(car.model, "");
         assert_eq!(car.color, "");
-        assert_eq!(car.doors, 0); 
+        assert_eq!(car.doors, 0);
     }
 }
