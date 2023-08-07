@@ -20,7 +20,7 @@ impl<T: Ord + Clone> MinStack<T> {
 
         self.stack.push_back(x);
     }
-    
+
     pub fn pop(&mut self) -> Option<T> {
         let popped = self.stack.pop_back();
         if popped.as_ref() == self.mins.back() {
@@ -28,7 +28,6 @@ impl<T: Ord + Clone> MinStack<T> {
         }
         popped
     }
-    
 
     pub fn top(&self) -> Option<&T> {
         self.stack.back()

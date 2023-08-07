@@ -41,12 +41,12 @@ impl<T> CircularQueue<T> {
         if self.is_empty() {
             return None;
         }
-       
+
         let res = self.queue[self.head].take();
 
         self.head += 1;
         self.head %= self.max_size;
-    
+
         self.size -= 1;
 
         res
@@ -68,7 +68,6 @@ impl<T> CircularQueue<T> {
         self.size == self.max_size
     }
 }
-
 
 #[cfg(test)]
 mod tests {
