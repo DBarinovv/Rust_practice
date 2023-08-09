@@ -1,0 +1,2 @@
+cargo:rustc-link-search=./
+cargo:rustc-link-lib=dylib=simple_math
