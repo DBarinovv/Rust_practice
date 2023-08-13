@@ -44,13 +44,22 @@ where
     }
 }
 
-pub fn vec_loop<T>(v: &Vec<T>)
+pub fn vec_loop<T>(v: &[T])
 where
     T: std::fmt::Debug + std::ops::Mul + Square<T>,
     <T as Square<T>>::Output: std::fmt::Debug,
 {
     v.iter()
         .for_each(|elem| println!("{:?}, {:?}", elem, elem.square()));
+}
+
+//=============================================
+
+pub fn sort_evens(v: &mut [i32]) {
+    v.sort_by(|a, b| match (a % 2 == 0, b % 2 == 0) {
+        (true, true) => a.cmp(b),
+        _ => std::cmp::Ordering::Equal,
+    });
 }
 
 #[cfg(test)]
@@ -74,5 +83,40 @@ mod tests {
         assert_eq!(person.age, 6);
 
         person.greet();
+    }
+
+    #[test]
+    fn test_empty() {
+        let mut v: Vec<i32> = vec![];
+        sort_evens(&mut v);
+        assert_eq!(v, vec![]);
+    }
+
+    #[test]
+    fn test_all_odd() {
+        let mut v = vec![1, 3, 5, 7, 9];
+        sort_evens(&mut v);
+        assert_eq!(v, vec![1, 3, 5, 7, 9]); // No change
+    }
+
+    #[test]
+    fn test_all_even() {
+        let mut v = vec![8, 6, 4, 2];
+        sort_evens(&mut v);
+        assert_eq!(v, vec![2, 4, 6, 8]); // Sorted
+    }
+
+    #[test]
+    fn test_mixed() {
+        let mut v = vec![3, 2, 1, 6, 4, 5];
+        sort_evens(&mut v);
+        assert_eq!(v, vec![3, 2, 1, 4, 6, 5]); // Only even numbers sorted
+    }
+
+    #[test]
+    fn test_duplicates() {
+        let mut v = vec![2, 4, 2, 4];
+        sort_evens(&mut v);
+        assert_eq!(v, vec![2, 2, 4, 4]); // Sorted, including duplicates
     }
 }
