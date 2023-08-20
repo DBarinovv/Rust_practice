@@ -1,0 +1,11 @@
+/home/denis/Rust_practice/sqlx/db_rust_example/target/debug/deps/futures_task-05afe69cfb771493.rmeta: /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/lib.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/spawn.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/arc_wake.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/waker.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/waker_ref.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/future_obj.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/noop_waker.rs
+
+/home/denis/Rust_practice/sqlx/db_rust_example/target/debug/deps/futures_task-05afe69cfb771493.d: /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/lib.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/spawn.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/arc_wake.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/waker.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/waker_ref.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/future_obj.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/noop_waker.rs
+
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/lib.rs:
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/spawn.rs:
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/arc_wake.rs:
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/waker.rs:
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/waker_ref.rs:
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/future_obj.rs:
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-task-0.3.28/src/noop_waker.rs:
