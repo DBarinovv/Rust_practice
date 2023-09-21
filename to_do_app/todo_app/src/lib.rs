@@ -2,6 +2,7 @@ use std::cmp::Ordering;
 use std::collections::BTreeSet;
 
 use time::Date;
+use time::macros::date;
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord)]
 enum TaskPriority {
@@ -10,6 +11,7 @@ enum TaskPriority {
     High,
 }
 
+#[derive(Debug)]
 struct Task {
     id: u64,
     description: String,
@@ -38,12 +40,16 @@ impl PartialEq for Task {
 impl Eq for Task { }
 
 impl Task {
-    pub fn new(description: String, priority: TaskPriority) -> Self {
-        Self { id: 0, description, priority, due_date: None }
+    pub fn new(description: &str, priority: TaskPriority) -> Self {
+        Self { id: 0, description: description.to_owned(), priority, due_date: None }
+    }
+
+    pub fn new_with_due_date(description: &str, priority: TaskPriority, due_date: Date) -> Self {
+        Self { id: 0, description: description.to_owned(), priority, due_date: Some(due_date) }
     }
 
     fn print(&self) {
-        println!("Task {} with {:?} priority and due_date = {}\n ", self.id, self.priority, self.due_date.unwrap_or(Date::MIN));
+        println!("Task {} with {:?} priority and due_date = {}\n ", self.id, self.priority, self.due_date.map_or("No due date".to_string(), |date| date.to_string()));
     }
 }
 
@@ -58,7 +64,9 @@ impl App {
     }
 
     fn print_tasks(&self) {
-        self.tasks.iter().map(|task| task.print());
+        for task in &self.tasks {
+            task.print();
+        }
     }
 
     fn add_task(&mut self, mut task: Task) {
@@ -75,7 +83,14 @@ mod tests {
 
     #[test]
     fn simple_test() {
-        let app = App::new();
-        // app.add_task(task);
+        let mut app = App::new();
+
+        let task1 = Task::new("Huawei", TaskPriority::Low);
+        let task2 = Task::new_with_due_date("Make bed", TaskPriority::Medium, date!(2023-09-04));
+
+        app.add_task(task1);
+        app.add_task(task2);
+
+        app.print_tasks();
     }
 }

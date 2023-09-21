@@ -1,0 +1,12 @@
+/home/denis/Rust_practice/interviews/ant/target/debug/deps/half-852691b79ea35851.rmeta: /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/lib.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/bfloat.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/bfloat/convert.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/binary16.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/binary16/convert.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/leading_zeros.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/slice.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/vec.rs
+
+/home/denis/Rust_practice/interviews/ant/target/debug/deps/half-852691b79ea35851.d: /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/lib.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/bfloat.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/bfloat/convert.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/binary16.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/binary16/convert.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/leading_zeros.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/slice.rs /home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/vec.rs
+
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/lib.rs:
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/bfloat.rs:
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/bfloat/convert.rs:
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/binary16.rs:
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/binary16/convert.rs:
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/leading_zeros.rs:
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/slice.rs:
+/home/denis/.cargo/registry/src/index.crates.io-6f17d22bba15001f/half-2.2.1/src/vec.rs:
