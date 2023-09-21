@@ -41,9 +41,9 @@ impl Ant {
         grid.set(idx, on_white_cell);
 
         match self.direction {
-            Direction::Up => self.y -= 1,
+            Direction::Up => self.y += 1,
             Direction::Right => self.x += 1,
-            Direction::Down => self.y += 1,
+            Direction::Down => self.y -= 1,
             Direction::Left => self.x -= 1,
         }
     }

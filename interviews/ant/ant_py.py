@@ -15,6 +15,7 @@ class Ant:
         self.direction = UP
     
     def step(self, grid):
+        print(self.y, self.x)
         if grid[self.y][self.x]:  # On black cell
             self.direction = (self.direction - 1) % 4  # Rotate by 90 degree on the right
             grid[self.y][self.x] = 0  # Invertion
