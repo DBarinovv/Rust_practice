@@ -1,0 +1,10 @@
+[package]
+name = "img_server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+opencv = "0.52.0"
+serde = { version = "1.0", features = ["derive"] }
+tokio = { version = "1.32.0", features = ["full"] }
+warp = "0.3.5"
