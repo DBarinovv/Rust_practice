@@ -41,7 +41,9 @@ async fn main() {
     let image_path = args[1].clone();
 
     // Starting the server on localhost and port 8080
-    warp::serve(create_route(image_path)).run(([127, 0, 0, 1], 8080)).await;
+    warp::serve(create_route(image_path))
+        .run(([127, 0, 0, 1], 8080))
+        .await;
 }
 
 /// Creates a server route that listens to the "/image" path and processes incoming requests
@@ -72,7 +74,7 @@ async fn process_image(
         .map_err(|_| warp::reject::custom(ImageProcessingError::ImageReadError))?;
 
     let alpha = options.contrast.unwrap_or(DEFAULT_CONTRAST); // contrast: [0.0, 1.0]
-    
+
     // We need to beta be zero when brightness is 0.5. Also brightness limits are [0.0, +inf),
     // so it is why we use log2(brightness / 0.5). It gives us -inf when brightness approaches 0 and
     // +inf when brightness approaches +inf

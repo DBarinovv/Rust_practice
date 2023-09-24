@@ -1,33 +1,25 @@
 /// Image Processing Error Module
 /// Provides a custom error type, `ImageProcessingError`
-use std::fmt;
+use thiserror::Error;
 use warp::reject::Reject;
 
-/// Represents various errors that can occur during the image processing
-///
-/// * `InvalidParameters(String)`: Represents errors related to invalid parameters, holds a String with a descriptive error message
-/// * `ImageReadError`: Represents errors that can occur while reading an image
-/// * `ImageConversionError`: Represents errors that can occur while converting the image, for example during color adjustments
-/// * `ImageEncodingError`: Represents errors that can occur while encoding the image, for example, converting it to a specific format
-#[derive(Debug)]
+#[derive(Debug, Error)]
 pub enum ImageProcessingError {
+    /// Represents errors related to invalid parameters
+    #[error("Invalid Parameters: {0}")]
     InvalidParameters(String),
+
+    /// Represents errors that can occur while reading an image
+    #[error("Error reading the image")]
     ImageReadError,
+
+    /// Represents errors that can occur while converting the image
+    #[error("Error converting the image")]
     ImageConversionError,
+
+    /// Represents errors that can occur while encoding the image
+    #[error("Error encoding the image")]
     ImageEncodingError,
 }
 
 impl Reject for ImageProcessingError {}
-
-impl fmt::Display for ImageProcessingError {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match self {
-            ImageProcessingError::InvalidParameters(msg) => {
-                write!(f, "Invalid Parameters: {}", msg)
-            }
-            ImageProcessingError::ImageReadError => write!(f, "Error reading the image"),
-            ImageProcessingError::ImageConversionError => write!(f, "Error converting the image"),
-            ImageProcessingError::ImageEncodingError => write!(f, "Error encoding the image"),
-        }
-    }
-}
