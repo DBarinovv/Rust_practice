@@ -1,9 +1,16 @@
+/// Handlers Module
+/// Provides HTTP handler functions to process incoming requests.
 use crate::errors::ImageProcessingError;
 use crate::image_processing::{
     process_image, ImageProcessingOptions, DEFAULT_BRIGHTNESS, DEFAULT_CONTRAST,
 };
 use warp::Rejection;
 
+/// Asynchronously handles the image processing requests
+///
+/// # Arguments
+/// * `options` - The image processing options containing user-defined or default brightness and contrast values
+/// * `image_path` - A String that holds the path to the image filet
 pub async fn process_image_handler(
     options: ImageProcessingOptions,
     image_path: String,

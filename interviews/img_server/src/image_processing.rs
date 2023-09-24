@@ -19,11 +19,12 @@ pub struct ImageProcessingOptions {
     pub contrast: Option<f64>,
 }
 
-/// Asynchronously processes the image based on provided options and returns the processed image
+/// Processes an image with the given brightness and contrast values and returns the processed image
 ///
 /// # Arguments
-/// * `options` - The image processing options containing user-defined or default brightness and contrast values
-/// * `image_path` - A String that holds the path to the image file
+/// * `image_path` - A &str holding the path to the image file
+/// * `brightness` - A f64 value for adjusting the brightness of the image
+/// * `contrast` - A f64 value for adjusting the contrast of the image
 pub fn process_image(
     image_path: &str,
     brightness: f64,
